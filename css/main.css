@@ -1,7 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+:root{
+    --gradient-blue-color: -webkit-linear-gradient(0deg, #005c97 0, #0f4c9a 25%, #363795);
+    --gradient-dark-blue-color: -webkit-linear-gradient(0deg, #015183 0, #0c3872 25%, #2b2c72);
+    --font-blue-color: #005c97;
+    --border-gray-color: rgba(0,0,0,.25);
+    --blogpost-box-shadow: 0 4px 4px 4px rgba(0,0,0,0.5);
+}
+
 
 body{
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -35,8 +45,9 @@ header{
 header .header-icons-container{
     width: 100%;
     height: 50px;
+    padding-top: 3px;
     display: grid;
-    background: -webkit-linear-gradient(0deg, #005c97 0, #0f4c9a 25%, #363795);
+    background: var(--gradient-blue-color);
 }
 
 header .header-icons-container .icons{
@@ -63,12 +74,12 @@ nav{
 }
 
 nav .nav-logo-container{
-    margin-left: 50px;
+    margin-left: 25px;
 }
 
 nav .nav-logo-container img{
     width: 220px;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 nav .profile-link{
@@ -81,6 +92,7 @@ nav .profile-link{
 nav .profile-link a{
     color: black;
     border-bottom: 1px solid black;
+    font-family: 'Audiowide', cursive;
 }
 
 nav .profile-link a:hover{
@@ -108,7 +120,7 @@ nav .profile-link a:hover{
 }
 
 .home-main-text{
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Audiowide', cursive;
     font-size: 30px;
     font-weight: 700;
     letter-spacing: 10px;
@@ -117,9 +129,10 @@ nav .profile-link a:hover{
 }
 
 .home-main-button{
+    font-family: 'Audiowide', cursive;
     width: 110px;
     height: 50px;
-    background: #0f4c9a;
+    background: var(--gradient-blue-color);
     font-weight: 700;
     display: grid;
     align-items: center;
@@ -128,14 +141,21 @@ nav .profile-link a:hover{
 }
 
 .home-main-button:hover{
-    background: #0a2c58;
+    background: var(--gradient-dark-blue-color);
+    cursor: pointer;
 }
 
 .home-main-button a{
     font-weight: 700;
     font-size: 18px;
+    color: white;
 }
 
+.home-main-button span{
+    font-weight: 700;
+    font-size: 18px;
+    color: white;
+}
 .blogs-main{
     display: grid;
 }
@@ -171,28 +191,56 @@ nav .profile-link a:hover{
     padding: 0 50px 40px;
 }
 
+.grid-posts-container{
+    max-width: 980px;
+    margin: auto;
+    text-align: center;
+}
+
 .blogs-posts-container h3{
     border-bottom: 1px solid #cdd2da;
     padding-bottom: 20px;
-    text-align: center;
 }
 
 .blogs-button{
     border: 1px solid #0f4c9a;
     padding: 10px 15px;
     font-size: 12px;
+    transition: 0.3s;
+}
+
+.blogs-button:hover{
+    border: 1px solid white;
+    background-color: #0f4c9a;
+    color: white;
 }
 
 .blogs-posts-container .post-container{
     justify-self: center;
     display: inline-block;
-    padding-left: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
     max-width: 30%;
     margin-bottom: 50px;
+    border: 1px solid var(--border-gray-color);
+    overflow: hidden;
+    transition: 0.3s;
 }
 
+
 .blogs-posts-container .post-container p{
-    margin-bottom: 35px;
+    margin: 5px 5px 25px 10px;
+    text-align: initial;
+    
+}
+
+.blogs-posts-container .post-container:hover{
+    box-shadow: var(--blogpost-box-shadow);
+}
+
+
+.blogs-posts-container .post-container:hover p{
+    color: var(--font-blue-color);
 }
 
 .post-container .post-title{
@@ -216,6 +264,7 @@ footer{
 footer p{
     color: white;
     margin-top: 30px;
+    font-family: 'Audiowide', cursive;
 }
 
 .blogpost-img-container {
