@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página web de destino para mostrar los beneficios, planes y ventajas al adquirir un servicio por medio de tarjetas comparativas y una sección de contacto.">
     <title>Servicio Web</title>
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/media-queries.css">
@@ -36,14 +37,46 @@
         </section>
         <section class="blogpost-main-container">
             <div class="grid-container">
+                <a class="return-blogs" href="blogs.html"><p><i class="fas fa-caret-square-left"></i> Volver a Blogposts</p></a>
                 <h3>Desarrollo Web</h3>
                 <article>
                     <h1>Servicio Web</h1>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt illum harum dolorem earum consectetur tempora aspernatur aliquam rem ipsa eos excepturi culpa nam corporis quia quis, nobis explicabo minima minus?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores provident earum corrupti perferendis obcaecati dolorum dolores vel, iusto ullam nulla enim porro, dolore ipsam quae laborum, repellat vero pariatur optio.
-                    Ad esse sit excepturi ab, odit ipsam suscipit iste magni nostrum quidem animi officiis qui ex, impedit alias vero. Maxime expedita esse iste temporibus, doloremque excepturi optio architecto magnam eveniet!
-                    Harum at ducimus odio animi fugit iusto voluptate quis veritatis nihil, inventore tenetur. Corrupti sequi vitae incidunt, aliquid aperiam ab a ipsam impedit dolores inventore iste expedita labore ea eius.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates voluptate, recusandae illo obcaecati suscipit natus at! Laborum tempora sunt, modi ducimus dolore aspernatur reiciendis debitis quaerat, magni recusandae laudantium quisquam.Nesciunt veniam porro cumque vitae rem tempora, reiciendis ut accusamus pariatur nostrum. Modi quisquam ea, alias magnam velit molestias amet beatae eveniet tempora delectus nobis, dolore omnis saepe. Saepe, dolore.</p>
+                    <p>
+                        Para comenzar este proyecto está divido en seis (6) partes y son: 
+                    </p>
+                    <ol>
+                        <li>Barra de Navegación Superior</li>
+                        <li>Sección de Video</li>
+                        <li>Sección de Beneficios</li>
+                        <li>Sección de Planes</li>
+                        <li>Segmento de contacto</li>
+                        <li>Pie de pagina</li>
+                    </ol>
+                    <p>
+                        En la barra de navegación destacamos las distintas partes a las cuales queremos navegar rápidamente, para que el usuario no tenga que hacer scroll todo el tiempo. Entre estas partes estaría el logo de la empresa, Features que son los beneficios del servicio de esta empresa, Services para destacar los distintos planes y por ultimo Contact Us para guiarnos a la sección de donde colocamos nuestro correo.
+                    </p>
+                    <p>
+                        Uno de los principales problemas que se presenta es que esta parte desaparecía una vez descendíamos, sin embargo, se puede solucionar fácilmente si en nuestro archivo.css le añadimos a este elemento la propiedad <code>position:</code> y le asignamos el valor <code>fixed</code>. De esta forma la barra de navegación nos seguirá en todo momento.
+                    </p>
+                    <p>
+                        Respecto a la sección de video debemos usar la funcionalidad de compartir de Youtube, la cual nos genera un código HTML dentro de etiquetas <code>&lt;iframe&gt;</code>, el cual vamos añadir a nuestra página y ajustaremos con estilos CSS. En cuanto a la sección de beneficios debemos establecer la posición tanto para los imágenes como el texto, una de las formas que se puede lograr es usando la propiedad con su valor <code>display: grid</code>, para volver la grilla este contenedor y luego indicamos las columnas que queremos usar con <code>grid-template-columns</code>.
+                    </p>
+                    <p>
+                        Ahora bien, con la sección de planes queremos establecer qué servicio resaltar al colocar en el medio, de esta forma al usuario ver las otras opciones decidirá que la mejor es la que está entre todas. Por esta razón, es que se usan una cantidad de tarjetas impar es decir se pueden usar 3, 5 o 7, lo más común son 3. Para lograr este efecto debemos establecer contenedores para cada servicio los cuales vamos a estilizar usando el formato estándar de tarjetas (Si no conoces como crearlo puede consultar la forma básica de en esta <a href="https://www.w3schools.com/howto/howto_css_cards.asp" target="_blank" alt="enlace a la publicación de W3Schools sobre tarjetas">publicación de W3Schools</a>).
+                    </p>
+                    <p>
+                        En relación al segmento de contacto vamos a utilizar etiquetas <code>&lt;form&gt;</code> donde utilizaremos el atributo <code>action=””</code> para indicar la dirección donde queremos que se envíen los datos y el atributo <code>action=”POST”</code> para que se pasen de forma oculta. Recuerda, que el objetivo principal de esta sección es obtener un medio de contacto con el usuario para brindarle un excelente servicio, asi que solo necesitaremos dos <code>&lt;input&gt;</code> uno para el nombre y el otro para correo o número telefonico.
+                    </p>
+                    <p>
+                        Como última parte tendremos el pie de página, donde dispondremos enlaces de interés para el usuario y otros medios de contacto para obtener más información.
+                    </p>
+                    <p>
+                        Ahora que ya conoces las partes esenciales de este proyecto te invito a revisarlo tanto su código como su versión web a través de estos enlaces: 
+                    </p>
+                    <div>
+                            <i class="fab fa-github"> <a href="https://github.com/Ulzahk/FCC-Product-Landing-Page" target="_blank" alt="Codigo Servicio Web">Repositorio</a></i>
+                            <i class="fas fa-file-invoice"> <a href="https://ulzahk.github.io/FCC-Product-Landing-Page/" target="_blank" alt="Página Web Servicio Web">Pagina Web</a></i>
+                    </div>
                 </article>
             </div>
         </section>
@@ -51,15 +84,15 @@
             <div>
                 <img src="../assets/icons/correo-electronico.png" alt="Logo de contacto">
                 <div class="contact-left">
-                    <a href="/">Contacto</a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta itaque rem, recusandae debitis ducimus veritatis.</p>
+                    <a href="mailto:ulzahk@gmail.com">Contacto</a>
+                    <p>Si quieres que juntos trabajemos en algún proyecto por favor contáctame a través de este medio.</p>
                 </div>
             </div>
             <div>
                 <img src="../assets/icons/escribir.png" alt="Logo de escribir">
                 <div class="contact-right">
-                    <a href="/">Escribe</a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta itaque rem, recusandae debitis ducimus veritatis.</p>
+                    <a href="mailto:frank102030@hotmail.es">Escribe</a>
+                    <p>Tienes preguntas o quieres compartir una idea para tener en cuenta, escribirme usando este enlace.</p>
                 </div>
             </div>
         </section>
@@ -69,5 +102,6 @@
             Ulzahk's Blog desde 2020 Hecho Con ⚡ & ☕
         </p>
     </footer>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 </html>
